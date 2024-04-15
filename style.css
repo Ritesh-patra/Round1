@@ -1,7 +1,13 @@
+@font-face {
+    font-family: arya;
+    src: url('./fonts/apercu-light-pro.ttf');
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: arya;
 }
 html , body{
     height: 100%;
