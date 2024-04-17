@@ -45,7 +45,7 @@ function sliderUpImg() {
         x: "0"
     }, "d")
 
-    t1.to(".arya1 p,h1", {
+    t1.to(".arya1 p,h1,h4", {
         opacity: 0,
     }, "a")
 
