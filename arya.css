@@ -25,7 +25,7 @@
     font-family: arya;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
     display: none;
 }
 
@@ -111,7 +111,7 @@ main {
     width: 220px;
 }
 
-.arya1 h4{
+.arya1 h4 {
     color: white;
     position: absolute;
     bottom: 10px;
@@ -140,6 +140,7 @@ main {
     display: flex;
     align-items: end;
 }
+
 .arya2 .arya_scroll {
     color: white;
     display: flex;
@@ -156,4 +157,84 @@ main {
     flex-shrink: 0;
 }
 
+.arya3 {
+    width: 100%;
+    height: 100vh;
+    background: black;
+    color: white;
+    position: relative;
+    perspective: 1000px;
+    perspective-origin: center;
+    overflow: hidden;
+}
+
+.arya3_div1 {
+    background-color: #031e78;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.arya3_div2 {
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.arya3_div2 img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.card {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.arya_card1 {
+    width: 500px;
+    height: 285px;
+    border: 2px solid white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    /* transform: translate(-50%,-50%); */
+    transform-style: preserve-3d;
+}
+
+
+.card img {
+    width: 100%;
+}
+
+.arya_card1_front {
+    transform: rotateY(180deg);
+}
+
+
 /* ----------------ARYA------------ */
+
+/* var arya_card1 = document.querySelector('.arya_card1');
+var arya3Div = document.querySelector('.arya3');
+
+// Get the coordinates of the element
+var rect = arya_card1.getBoundingClientRect();
+var rect1 = arya3Div.getBoundingClientRect();
+
+// Extracting the coordinates
+var topLeftCorner = { x: Math.abs((rect.left / window.innerWidth * 100)), y: Math.abs((rect.top - rect1.top) / window.innerHeight * 100) };
+var bottomLeftCorner = { x: Math.abs((rect.left / window.innerWidth * 100)), y: Math.abs((rect.bottom - rect1.bottom) / window.innerHeight * 100) };
+var topRightCorner = { x: Math.abs((rect.right / window.innerWidth * 100)), y: Math.abs((rect.top - rect1.top) / window.innerHeight * 100) };
+var bottomRightCorner = { x: Math.abs((rect.right / window.innerWidth * 100)), y: Math.abs((rect.bottom - rect1.bottom) / window.innerHeight * 100) };
+
+let arya3_div2 = document.querySelector(".arya3_div2")
+// arya3_div2.style.clipPath = `polygon(${topLeftCornerPercentage}, ${topRightCornerPercentage}, ${bottomRightCornerPercentage}, ${bottomLeftCornerPercentage})`;
+arya3_div2.style.clipPath = `polygon(${topLeftCorner.x}%  ${topLeftCorner.y}%, ${topRightCorner.x}% ${topRightCorner.y}%, ${bottomRightCorner.x}% ${100 - bottomRightCorner.y}%, ${bottomLeftCorner.x}% ${100 - bottomLeftCorner.y}%)`; */
